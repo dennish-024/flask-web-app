@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = 'docker-hub-credentials' // Jenkins credentials ID
-        IMAGE_NAME = 'dennish024/flask-jenkins-docker'  // Docker Hub repo
+        IMAGE_NAME = 'dennish024/flask-web-app'  // Docker Hub repo
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
             steps {
                 // Replace 'github-credentials-id' with your GitHub credentials in Jenkins
                 git branch: 'main', 
-                    url: 'https://github.com/dennish-024/flask-jenkins-docker.git', 
+                    url: 'https://github.com/dennish-024/flask-web-app.git', 
                     credentialsId: 'github-credentials-id'
             }
         }
